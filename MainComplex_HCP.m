@@ -24,7 +24,7 @@ N_Networks = [7 17];
 ITR = 10000;
 
 Yeo_2011_17networks_names_abr = {'VN-c','VN-p','SMN-a','SMN-b','DAN-a','DAN-b','VAN','SN','LN-a','LN-b','ECN-c','ECN-a','ECN-b','TPN','DMN-c','DMN-a','DMN-b'};
-Yeo_2011_7networks_names_abr = {'VN','SMA','DAN','SN/VAN','LN','ECN','DMN'};
+Yeo_2011_7networks_names_abr = {'VN','SMN','DAN','SN/VAN','LN','ECN','DMN'};
 
 %%
 % for atlas = 1:length(Atlas)
@@ -279,7 +279,7 @@ for atlas = 1:length(Atlas)
     iccR_MI(1,atlas) = icc.MI.r;    iccR_PR(1,atlas) = icc.PR.r;
     iccU_MI(1,atlas) = icc.MI.UB;   iccU_PR(1,atlas) = icc.PR.UB;
     
-    [icc.MI.r, icc.MI.LB, icc.MI.UB, icc.MI.F, icc.MI.df1, icc.MI.df2, icc.MI.p] = ICC(MutualInformation2, 'C-k') ;
+    [icc.MI.r, icc.MI.LB, icc.MI.UB, icc.MI.F, icc.MI.df1, icc.MI.df2, icc.MI.p] = ICC(MutualInformation2, 'C-k');
     [icc.PR.r, icc.PR.LB, icc.PR.UB, icc.PR.F, icc.PR.df1, icc.PR.df2, icc.PR.p] = ICC(ParticipationRatio2, 'C-k') ;
     save('ICC_group2.mat','icc');
     iccR_MI(2,atlas) = icc.MI.r;    iccR_PR(2,atlas) = icc.PR.r;
